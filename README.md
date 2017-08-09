@@ -63,6 +63,20 @@ want to exclude the `.git` and `node_modules` directories, though.
 * `PORT` defines the port for the development static file server to
   listen on. It defaults to `8000`.
 
+## Changing the Standards version
+
+The version of the Standards being used is specified in `package.json`
+under the `uswds` dependency. So, for instance, if you want to use
+version 1.3.0 of the standards, run:
+
+```
+npm install --save uswds@1.3.0
+```
+
+Note that at the time of this writing, using a version of the
+Standards that doesn't come from npm is non-trivial, due to
+[18F/web-design-standards#2032](https://github.com/18F/web-design-standards/issues/2032).
+
 [uswds]: https://standards.usa.gov/
 [customization and theming]: https://standards.usa.gov/getting-started/developers/#customization-and-theming
 [js customization]: https://standards.usa.gov/getting-started/developers/#js-customization
