@@ -8,8 +8,7 @@ It also includes built-in support for deployment on [Federalist][].
 
 ## Limitations
 
-Because of this project's extremely limited scope, it has a number
-of limitations:
+Due to this project's small scope, it has a number of limitations:
 
 * It doesn't use a module bundler like Browserify or Webpack, and
   therefore doesn't allow for any [js customization][] of the Standards.
@@ -51,12 +50,13 @@ Run `npm run build` to generate the site's CSS and vendored assets.
 
 ## Deploying the site
 
-If you use Federalist, everything is taken care of for you; an
-`federalist` npm script target is already included with this project.
+If you use Federalist, everything is taken care of for you; a
+[Federalist npm script][] is already included with this project,
+which ensures that your site will be properly built by Federalist.
 
 Otherwise, you can deploy the site by copying all the files from the
 root directory of the project to a static web server. You'll probably
-want to exclude the `.git` and `node_modules` directory, though.
+want to exclude the `.git` and `node_modules` directories, though.
 
 ## Environment variables
 
@@ -69,3 +69,4 @@ want to exclude the `.git` and `node_modules` directory, though.
 [uswds-jekyll]: https://github.com/18F/uswds-jekyll
 [Node.js]: https://nodejs.org/
 [Federalist]: https://federalist.18f.gov/
+[Federalist npm script]: https://federalist-docs.18f.gov/pages/how-federalist-works/node-on-federalist/
