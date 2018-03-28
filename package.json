@@ -1,7 +1,7 @@
 {
   "name": "uswds-simple-sass",
   "version": "1.0.0",
-  "description": "Simple example project that uses the SASS files of the U.S. Web Design Standards.",
+  "description": "Simple example project that uses the SASS files of the U.S. Web Design System.",
   "scripts": {
     "start": "gulp watch",
     "build": "gulp",

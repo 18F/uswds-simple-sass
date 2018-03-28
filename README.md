@@ -1,8 +1,8 @@
 This is a simple example project that uses the SASS files of the
-[U.S. Web Design Standards][uswds].
+[U.S. Web Design System][uswds].
 
 It can be used to create simple static one-pagers that just need
-access to the Standards' SASS for [customization and theming][].
+access to the USWDS's SASS for [customization and theming][].
 
 It also includes built-in support for deployment on [Federalist][].
 
@@ -11,7 +11,7 @@ It also includes built-in support for deployment on [Federalist][].
 Due to this project's small scope, it has a number of limitations:
 
 * It doesn't use a module bundler like Browserify or Webpack, and
-  therefore doesn't allow for any [js customization][] of the Standards.
+  therefore doesn't allow for any [js customization][] of the USWDS.
 
 * It doesn't use a templating system of any kind, so creating a site
   with multiple pages that share common elements isn't easy. See
@@ -63,23 +63,23 @@ want to exclude the `.git` and `node_modules` directories, though.
 * `PORT` defines the port for the development static file server to
   listen on. It defaults to `8000`.
 
-## Changing the Standards version
+## Changing the USWDS version
 
-The version of the Standards being used is specified in `package.json`
+The version of the USWDS being used is specified in `package.json`
 under the `uswds` dependency. So, for instance, if you want to use
-version 1.3.0 of the standards, run:
+version 1.3.0 of the USWDS, run:
 
 ```
 npm install --save uswds@1.3.0
 ```
 
 Note that at the time of this writing, using a version of the
-Standards that doesn't come from npm is non-trivial, due to
-[18F/web-design-standards#2032](https://github.com/18F/web-design-standards/issues/2032).
+USWDS that doesn't come from npm is non-trivial, due to
+[uswds/uswds#2032](https://github.com/uswds/uswds/issues/2032).
 
-[uswds]: https://standards.usa.gov/
-[customization and theming]: https://standards.usa.gov/getting-started/developers/#customization-and-theming
-[js customization]: https://standards.usa.gov/getting-started/developers/#js-customization
+[uswds]: https://designsystem.digital.gov/
+[customization and theming]: https://designsystem.digital.gov/getting-started/developers/#customization-and-theming
+[js customization]: https://designsystem.digital.gov/getting-started/developers/#js-customization
 [uswds-jekyll]: https://github.com/18F/uswds-jekyll
 [Node.js]: https://nodejs.org/
 [Federalist]: https://federalist.18f.gov/
