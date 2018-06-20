@@ -11,13 +11,17 @@ const PORT = process.env.PORT || '8000';
 const USWDS_DIST = 'node_modules/uswds/dist';
 const USWDS_DIST_DIR = path.join(__dirname, ...USWDS_DIST.split('/'));
 
+// If moving assets to a sub-directory, change '.' to that sub-directory.
+// e.g. 'assets', or 'public/assets'.
+const ASSETS_DIR = path.join(__dirname, '.');
+
 gulp.task('copy-uswds-assets', () => {
   return gulp.src(`${USWDS_DIST}/@(js|fonts|img)/**/**`)
-  .pipe(gulp.dest('./vendor/uswds'));
+  .pipe(gulp.dest(`${ASSETS_DIR}/vendor/uswds`));
 });
 
 gulp.task('sass', () => {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src(`${ASSETS_DIR}/sass/**/*.scss`)
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
@@ -25,11 +29,11 @@ gulp.task('sass', () => {
       ]
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest(`${ASSETS_DIR}/css`));
 });
 
 gulp.task('sass:watch', () => {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch(`${ASSETS_DIR}/sass/**/*.scss`, ['sass']);
 });
 
 gulp.task('watch', ['default', 'sass:watch'], done => {
